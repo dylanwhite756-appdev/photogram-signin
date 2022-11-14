@@ -1,4 +1,8 @@
 class UsersController < ApplicationController
+  def new_registration_form
+      redner({ :template => sign})
+  end
+  
   def index
     @users = User.all.order({ :username => :asc })
 
